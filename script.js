@@ -1,5 +1,6 @@
 // topnav
 var topnav = document.getElementById("topnav");
+var slide = document.getElementById("slide");
 window.addEventListener("load", function(){
   topnav.innerHTML = '<a class="active" href="#slide">home</a>';
   topnav.innerHTML += '<a href="#profile">profile</a>';
@@ -23,10 +24,12 @@ topnav.addEventListener("click", function(e){
     }
 }, false);
 window.addEventListener("scroll", function(){
-  if(window.pageYOffset > topnav.offsetTop){
+  if(window.scrollY >= slide.offsetHeight){
     topnav.classList.add("sticky");
+    document.body.style.paddingTop = topnav.offsetHeight+'px';
   } else {
     topnav.classList.remove("sticky");
+    document.body.style.paddingTop = 0;
   }
 }, false);
 // carousel
@@ -90,5 +93,5 @@ window.addEventListener("load", function(){
   contact.querySelector("ul").innerHTML = "<li>Email：td231565@gmail.com</li>";
   contact.querySelector("ul").innerHTML += "<li>電話：0910110816</li>";
   contact.querySelector("ul").innerHTML += "<li>時間：9:00am~6:00pm</li>";
-  contact.innerHTML += '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCduUd6dD1y-JHVCBa3wJudKbSbLaCyG0E&q=台北市政府" allowfullscreen></iframe>';
+  contact.innerHTML += '<iframe width="400" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCduUd6dD1y-JHVCBa3wJudKbSbLaCyG0E&q=台北市政府" allowfullscreen></iframe>';
 }, false);
