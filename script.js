@@ -32,55 +32,10 @@ window.addEventListener("scroll", function(){
     document.body.style.paddingTop = 0;
   }
 }, false);
-// carousel
-// window.addEventListener("load", function(){
-//   var slide = document.getElementById("slide");
-//   slide.innerHTML = '<img src="https://i.imgur.com/Hg6vtUg.jpg">';
-//   slide.innerHTML += '<img src="https://i.imgur.com/WOXEQVi.jpg">';
-//   slide.innerHTML += '<img src="https://i.imgur.com/ijcvnkU.jpg">';
-//   var items = slide.querySelectorAll("img"),
-//       prevBtn = document.createElement("a"),
-//       nextBtn = document.createElement("a"),
-//       counter = 0,
-//       timer = 3000,
-//       interval = window.setInterval(showNext, timer);
-//   prevBtn.classList.add("prev");
-//   nextBtn.classList.add("next");
-//   slide.appendChild(prevBtn);
-//   slide.appendChild(nextBtn);
-//   var showCurrent = function(){
-//     var showItem = Math.abs(counter % items.length);
-//     [].forEach.call(items, function(e){
-//       e.classList.remove("show");
-//     });
-//     items[showItem].classList.add("show");
-//     var showing = querySelector(".show");    
-//   };
-//   function showNext(){
-//     counter++;
-//     showCurrent();
-//   }
-//   function showPrev(){
-//     counter--;
-//     showCurrent();
-//   }
-//   slide.addEventListener("mouseover", function(){
-//     interval = clearInterval(interval);
-//   });
-//   slide.addEventListener("mouseout", function(){
-//     interval = window.setInterval(showNext, timer);
-//   });
-//   slide.addEventListener("click", function(){
-//     showNext();
-//   });
-//   nextBtn.addEventListener("click", showNext, false);
-//   prevBtn.addEventListener("click", showPrev, false);
-//   items[0].classList.add("show");  
-// }, false);
 // about
 window.addEventListener("scroll", slideUp, false);
 function slideUp(){
-  if(document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+  if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
     var about = document.getElementById("about");
     about.querySelector("div").classList.add("slideUp");
   }

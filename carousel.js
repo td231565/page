@@ -1,8 +1,8 @@
 window.addEventListener("load", function(){
     var slide = document.getElementById("slide");
-    slide.innerHTML = '<img src="https://i.imgur.com/Hg6vtUg.jpg">';
-    slide.innerHTML += '<img src="https://i.imgur.com/WOXEQVi.jpg">';
-    slide.innerHTML += '<img src="https://i.imgur.com/ijcvnkU.jpg">';
+    slide.innerHTML = '<img src="img/tree.jpg">';
+    slide.innerHTML += '<img src="img/lake.jpg">';
+    slide.innerHTML += '<img src="img/temple.jpg">';
     var items = slide.querySelectorAll("img"),
         prevBtn = document.createElement("a"),
         nextBtn = document.createElement("a"),
