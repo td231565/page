@@ -1,9 +1,9 @@
 window.addEventListener("load", function(){
     var slide = document.getElementById("slide");
-    slide.innerHTML = '<img src="img/tree.jpg">';
-    slide.innerHTML += '<img src="img/lake.jpg">';
-    slide.innerHTML += '<img src="img/temple.jpg">';
-    var items = slide.querySelectorAll("img"),
+    slide.innerHTML = '<div class="slideContent"><img src="img/tree.jpg"><button><b>interested</b></button></div>';
+    slide.innerHTML += '<div class="slideContent"><img src="img/lake.jpg"></div>';
+    slide.innerHTML += '<div class="slideContent"><img src="img/temple.jpg"></div>';
+    var items = slide.querySelectorAll(".slideContent"),
         prevBtn = document.createElement("a"),
         nextBtn = document.createElement("a"),
         counter = 0,
@@ -37,8 +37,7 @@ window.addEventListener("load", function(){
       [].forEach.call(items, function(e){
         e.classList.remove("show");
       });
-      items[showItem].classList.add("show");
-      var showing = querySelector(".show");    
+      items[showItem].classList.add("show");  
     };
     function showNext(){
       counter++;

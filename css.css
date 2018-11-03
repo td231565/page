@@ -1,10 +1,13 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 * { box-sizing: border-box; }
-:root { --mainWidth: 66%;}
+:root {
+  --mainWidth: 66%;
+  --buttonColor: tomato;
+}
 body {
   margin: 0;
   padding: 0;
-  background-color: #DCDCDC;
+  background-color: rgb(235, 233, 233);
   font-family: "Noto Sans TC", sans-serif;
   /* background-image: url(img/bridge.jpg);
   background-repeat: no-repeat;
@@ -39,7 +42,7 @@ a {
   padding: 10px 15px;
 }
 #topnav a:hover {
-  color: #5599FF;  
+  color: #5599FF;
   border-bottom: 3px solid blue;
 }
 #topnav a.active {
@@ -67,21 +70,27 @@ a {
   cursor: pointer;
   text-align: center;
 }
-#slide img {
+#slide .slideContent {
   position: absolute;
-  display: block;
-  top: 0;
-  /* left: 0; */
-  width: 100%;
   margin: auto;
+  width: 100%;
+  top: 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s;
 }
-#slide > img:first-child {
+#slide .slideContent:first-child {
   position: static;
 }
-#slide > img.show {
+#slide img {
+  /* position: absolute; */
+  display: block;
+  width: 100%;
+}
+/* #slide img:first-child {
+  position: static;
+} */
+#slide .show {
   opacity: 1;
   visibility: visible;
 }
@@ -140,6 +149,24 @@ a {
 }
 #slide .dot:hover, #slide .active {
   background-color: #717171;
+}
+#slide button {
+  border: 2px solid var(--buttonColor);
+  color: var(--buttonColor);
+  font-size: 30px;
+  position: absolute;
+  background: none;
+  bottom: 30%;
+  left: 10%;
+  /* right: 40%; */
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+#slide button:hover {
+  border: 2px solid var(--buttonColor);
+  background-color: var(--buttonColor);
+  color: #fff;
+  cursor: pointer;
 }
 #profile {
   background-color: #111;
@@ -257,7 +284,7 @@ a {
 #contact {
   margin: auto;
   padding: 16px;
-  background-color: #DCDCDC;
+  background-color: #AAAAAA;
   display: flex;
   justify-content: space-around;
 }
