@@ -50,3 +50,21 @@ window.addEventListener("load", function(){
   contact.querySelector("ul").innerHTML += "<li>時間：9:00am~6:00pm</li>";
   contact.innerHTML += '<iframe width="400" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCduUd6dD1y-JHVCBa3wJudKbSbLaCyG0E&q=台北市政府" allowfullscreen></iframe>';
 }, false);
+// card's textContent
+function cardText() {
+  var url = "http://td231565.github.io/page/text.json",
+      req = new XMLHttpRequest();
+  req.open("GET", url);
+  req.responseType = "json";
+  req.send();
+  req.onload = function() {
+    var response = req.response;
+    console.log(response);
+    // cards(response);
+  }
+  // function cards(textContent) {
+  //   var text = querySelectorAll(".text");
+  // }
+}
+cardText();
+
