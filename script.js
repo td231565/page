@@ -54,7 +54,11 @@ window.addEventListener("load", function(){
 function cardText() {
   var url = "http://td231565.github.io/page/text.json",
       req = new XMLHttpRequest();
+<<<<<<< HEAD
   req.open("GET", url);
+=======
+  req.open("get", url);
+>>>>>>> a6e957cb97199c0d2e494a9a7c0610018267476d
   req.responseType = "json";
   req.send();
   req.onload = function() {
@@ -62,9 +66,16 @@ function cardText() {
     console.log(response);
     // cards(response);
   }
+<<<<<<< HEAD
   // function cards(textContent) {
   //   var text = querySelectorAll(".text");
   // }
 }
 cardText();
+=======
+  function cards(textContent) {
+    var text = querySelectorAll(".text");
+  }
+}
+>>>>>>> a6e957cb97199c0d2e494a9a7c0610018267476d
 
