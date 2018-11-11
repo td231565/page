@@ -1,5 +1,5 @@
 function showView() {
-    let url = "http://www.dep-in.gov.taipei/epb/webservice/toilet.asmx/GetToiletData",
+    let url = "https://www.dep-in.gov.taipei/epb/webservice/toilet.asmx/GetToiletData",
         view = document.getElementById("view");
     axios.get(url)
     .then(function(response){

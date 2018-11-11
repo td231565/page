@@ -1,6 +1,5 @@
 // topnav
-var topnav = document.getElementById("topnav");
-var slide = document.getElementById("slide");
+let topnav = document.getElementById("topnav");
 window.addEventListener("load", function(){
   topnav.innerHTML = '<a class="active" href="#slide">home</a>';
   topnav.innerHTML += '<a href="#profile">profile</a>';
@@ -9,10 +8,10 @@ window.addEventListener("load", function(){
 }, false);
 topnav.addEventListener("click", function(e){
     if(e.target.tagName.toLowerCase() === "a"){
-      var a = topnav.getElementsByTagName("a");
+      let a = topnav.getElementsByTagName("a");
       /* ------- 巡遍 <a> 兩種方法-------- */
       // 方法1: for 迴圈
-      // for(var i=0; i<a.length; i++){
+      // for(let i=0; i<a.length; i++){
       //   a[i].className = "";
       // }
       // 方法2: forEach
@@ -24,6 +23,7 @@ topnav.addEventListener("click", function(e){
     }
 }, false);
 window.addEventListener("scroll", function(){
+  let slide = document.getElementById("slide");
   if(window.scrollY >= slide.offsetHeight){
     topnav.classList.add("sticky");
     document.body.style.paddingTop = topnav.offsetHeight+'px';
@@ -36,13 +36,13 @@ window.addEventListener("scroll", function(){
 window.addEventListener("scroll", slideUp, false);
 function slideUp(){
   if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-    var about = document.getElementById("about");
+    let about = document.getElementById("about");
     about.querySelector("div").classList.add("slideUp");
   }
 }
 // contact
 window.addEventListener("load", function(){
-  var contact = document.getElementById("contact"),
+  let contact = document.getElementById("contact"),
       list = document.createElement("ul");
   contact.appendChild(list);
   contact.querySelector("ul").innerHTML = "<li>Email：td231565@gmail.com</li>";

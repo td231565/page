@@ -1,9 +1,9 @@
 window.addEventListener("load", function(){
-    var slide = document.getElementById("slide");
+    let slide = document.getElementById("slide");
     slide.innerHTML = '<div class="slideContent"><img src="img/tree.jpg"><button><b>interested</b></button></div>';
     slide.innerHTML += '<div class="slideContent"><img src="img/lake.jpg"></div>';
     slide.innerHTML += '<div class="slideContent"><img src="img/temple.jpg"></div>';
-    var items = slide.querySelectorAll(".slideContent"),
+    let items = slide.querySelectorAll(".slideContent"),
         prevBtn = document.createElement("a"),
         nextBtn = document.createElement("a"),
         counter = 0,
@@ -12,15 +12,15 @@ window.addEventListener("load", function(){
         dots = document.createElement("div");
     dots.classList.add("dots");
     slide.appendChild(dots);
-    for(var i = 0; i<items.length; i++){
-        var dot = document.createElement("a");
+    for(let i = 0; i<items.length; i++){
+        let dot = document.createElement("a");
         dot.classList.add("dot");
         dot.classList.add("dot" + i);
         dots.appendChild(dot);
     }
     dots.addEventListener("click", function(e){
         if(e.target.tagName.tolowerCase() === "a"){
-            var dot = dots.querySelectorAll(".dot");
+            let dot = dots.querySelectorAll(".dot");
             [].forEach.call(dot, function(e){
                 e.classList.remove("active");
             });            
@@ -32,8 +32,8 @@ window.addEventListener("load", function(){
     nextBtn.classList.add("next");
     slide.appendChild(prevBtn);
     slide.appendChild(nextBtn);
-    var showCurrent = function(){
-      var showItem = Math.abs(counter % items.length);
+    let showCurrent = function(){
+      let showItem = Math.abs(counter % items.length);
       [].forEach.call(items, function(e){
         e.classList.remove("show");
       });
