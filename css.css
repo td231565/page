@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(235, 233, 233);
+  background-color: #303030;
   font-family: "Noto Sans TC", sans-serif;
   /* background-image: url(img/bridge.jpg);
   background-repeat: no-repeat;
@@ -190,14 +190,14 @@ a {
   margin: auto;
   padding: 20px 30px 20px 30px;
   border-radius: 8px;
-  opacity: 0;
-  transition: opacity 1s;
-}
-#about > div.slideUp {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   position: relative;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#about > div.slideUp {
   opacity: 1;  
   /* animation: slideUp 1.5s forwards;
   animation-timing-function: ease; */
@@ -247,39 +247,48 @@ a {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-#photo {
-  position: relative;
-  /* padding-top: 60px; */
-  width: 100%;
-  height: auto;
-  padding: 20px;
+#view {
+  margin-bottom: 0;
+  padding-top: 8%;
+  padding-bottom: 12%;
   background-color: #fff;
 }
-#photo .container {
-  position: relative;
-  width: 60%;
+#view .section {
   margin: auto;
+  margin-top: 50px;
+  width: 85%;
+  height: 450px;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#photo img {  
-  display: block;
-  transition: opacity 0.5s ease;
+#view .s1 {
+  background-image: url(img/sea.jpg);
+  background-attachment: fixed;
+  background-position: center top;
 }
-#photo img:first-child {
-  position: relative;
-  width: 99.9%;
+#view .s2 {
+  background-image: url(img/sea.jpg);
+  background-attachment: fixed;
+  background-position: center center;
 }
-#photo img:last-child {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  opacity: 1;
+#view .s3 {
+  background-image: url(img/sea.jpg);
+  background-attachment: fixed;
+  background-position: center bottom;
 }
-#photo img:last-child:hover {
-  opacity: 0;
+#view .icon {
+  align-self: center;
+  flex: 1;
+  text-align: center;
+}
+#view .text {
+  background-color: #fff;
+  flex: 2.5;
+  padding: 3%;
+  border-radius: 6px;
+  opacity: 0.8;
 }
 #contact {
   margin: auto;
@@ -292,7 +301,7 @@ a {
   padding: 2px;
 }
 @media only screen and (max-width: 700px) {
-  #main, #topnav {
+  #main, #topnav, #view .section {
     width: 100%;
   }
 }
