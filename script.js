@@ -1,10 +1,10 @@
 // topnav
-let topnav = document.getElementById("topnav");
+const topnav = document.getElementById("topnav")
 window.addEventListener("load", function(){
   topnav.innerHTML = '<a class="active" href="#slide">home</a>';
-  topnav.innerHTML += '<a href="#profile">profile</a>';
-  topnav.innerHTML += '<a href="#about">about</a>';
-  topnav.innerHTML += '<a href="#contact">contact</a>';
+  topnav.innerHTML += '<a href="#profile">profile</a>'
+  topnav.innerHTML += '<a href="#about">about</a>'
+  topnav.innerHTML += '<a href="#contact">contact</a>'
 }, false);
 topnav.addEventListener("click", function(e){
     if(e.target.tagName.toLowerCase() === "a"){
@@ -23,7 +23,7 @@ topnav.addEventListener("click", function(e){
     }
 }, false);
 window.addEventListener("scroll", function(){
-  let slide = document.getElementById("slide");
+  const slide = document.getElementById("slide");
   if(window.scrollY >= slide.offsetHeight){
     topnav.classList.add("sticky");
     document.body.style.paddingTop = topnav.offsetHeight+'px';
@@ -36,14 +36,14 @@ window.addEventListener("scroll", function(){
 window.addEventListener("scroll", slideUp, false);
 function slideUp(){
   if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-    let about = document.getElementById("about");
+    const about = document.getElementById("about");
     about.querySelector("div").classList.add("slideUp");
   }
 }
 // contact
 window.addEventListener("load", function(){
-  let contact = document.getElementById("contact"),
-      list = document.createElement("ul");
+  const contact = document.getElementById("contact");
+  let list = document.createElement("ul");
   contact.appendChild(list);
   contact.querySelector("ul").innerHTML = "<li>Email：td231565@gmail.com</li>";
   contact.querySelector("ul").innerHTML += "<li>電話：0910110816</li>";

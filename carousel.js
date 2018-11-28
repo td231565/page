@@ -1,15 +1,15 @@
 window.addEventListener("load", function(){
-    let slide = document.getElementById("slide");
+    const slide = document.getElementById("slide");
     slide.innerHTML = '<div class="slideContent"><img src="img/tree.jpg"><button><b>interested</b></button></div>';
     slide.innerHTML += '<div class="slideContent"><img src="img/lake.jpg"></div>';
     slide.innerHTML += '<div class="slideContent"><img src="img/temple.jpg"></div>';
-    let items = slide.querySelectorAll(".slideContent"),
-        prevBtn = document.createElement("a"),
-        nextBtn = document.createElement("a"),
-        counter = 0,
-        timer = 3000,
-        interval = window.setInterval(showNext, timer),
-        dots = document.createElement("div");
+    let items = slide.querySelectorAll(".slideContent");
+    let prevBtn = document.createElement("a");
+    let nextBtn = document.createElement("a");
+    let counter = 0;
+    let timer = 3000;
+    let interval = window.setInterval(showNext, timer);
+    let dots = document.createElement("div");
     dots.classList.add("dots");
     slide.appendChild(dots);
     for(let i = 0; i<items.length; i++){
