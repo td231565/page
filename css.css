@@ -310,7 +310,7 @@ a {
 #contact li {
   padding: 2px;
 }
-@media only screen and (max-width: 800px) {
+@media (max-width: 500px) {
   #main, #topnav, #view .section {
     width: 100%;
   }
