@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+#header {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #9eb6fa;
+    font-size: 20px;
+}
+#view {
+    margin-top: 30px;
+}
+#select {
+    width: 130px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    border-color: #71a3f2;
+}
+#cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    justify-content: space-around;
+}
+.card {
+    /* position: relative; */
+    margin: 20px;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px 1px #505151;
+}
+.card div:first-child {
+    padding: 10px;
+    background-color: #71a3f2;
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+}
+.card div:last-child {
+    position: relative;
+    margin: auto;
+    margin-top: 16px;
+    width: 180px;
+}
+.card .help {
+    display: none;
+    position: absolute;
+    bottom: 74px;
+    left: 128px;
+    padding: 10px;
+    background-color: #fafafa;
+    box-shadow: 0.5px 0.5px 1px 0.5px #505151;
+    font-size: 13px;
+}
+.card .help .low {
+    color: #018b01;
+}
+.card .help .medium {
+    color: #faac03;
+}
+.card .help .high {
+    color: #fd2c2c;
+}
+.card .help .reallyhigh {
+    color: #e903e9;
+}
+.card .helpIcon:hover ~ .help {
+    display: block;
+}
+.card .help:hover {
+    display: block;
+}
+#cardContainer .hello {
+    font-size: 200px;
+    color: #71a3f2;
+    text-align: center;
+    line-height: 300px;
+    text-shadow: 2px 2px #757575;
+    opacity: 0.6;
+}
+.spaceTop {
+    height: 70px;
+}
+.spaceBottom {
+    height: 240px;
+}
+#infoContainer {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: #1048a3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#infoSource {
+    color: #fff;
+}
+#infoSource a:visited {
+    color: #fff;
+}
+#infoSource a:hover {
+    color: #adff2f;
+}
