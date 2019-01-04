@@ -194,12 +194,12 @@ a {
   background-image: url(img/bridge.jpg);
 }
 #about > div {
-  display: flex;
-  width: 88%;
+  width: 86%;
   background-color: #fff;
   margin: auto;
   padding: 20px 30px 20px 30px;
   border-radius: 8px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -212,12 +212,11 @@ a {
   /* animation: slideUp 1.5s forwards;
   animation-timing-function: ease; */
 }
-#about > div:hover {
-  /* box-shadow:9px 9px 10px;
+/* #about > div:hover {
+  box-shadow:9px 9px 10px;
   transform: translate(-2px, -2px);
-  transition: transform 0.3s; */
-  border: 1px solid #5599FF;
-}
+  transition: transform 0.3s;
+} */
 /* @keyframes slideUp {
   from {top: 100px;}
   to {top: 0px;}
