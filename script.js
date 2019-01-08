@@ -23,7 +23,7 @@ topnav.addEventListener('click', function(e){
     }
 }, false)
 window.addEventListener('scroll', function(){
-  const slide = document.getElementById('slide')
+  let slide = document.getElementById('slide')
   if(window.scrollY >= slide.offsetHeight){
     topnav.classList.add('sticky')
     document.body.style.paddingTop = topnav.offsetHeight+'px'
@@ -47,14 +47,6 @@ function fadeIn(){
       sectionS2[0].classList.add('fadeIn')
     }
   }
-  // let card = document.getElementsByClassName('card')
-  // if (card[0].classList != 'card fadeIn'){
-  //   if (document.body.scrollTop > 430 || document.documentElement.scrollTop > 430){
-  //     for (let i=0, l=card.length; i<l; i++){
-  //       card[i].classList.add('fadeIn')
-  //     }
-  //   }
-  // }
 }
 // contact
 window.addEventListener('load', function(){
@@ -65,4 +57,24 @@ window.addEventListener('load', function(){
   list.innerHTML += '<li>電話：0910110816</li>'
   list.innerHTML += '<li>時間：9:00am~6:00pm</li>'
   // contact.innerHTML += '<iframe width="400" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCduUd6dD1y-JHVCBa3wJudKbSbLaCyG0E&q=台北市政府" allowfullscreen></iframe>'
+}, false)
+// topButton
+const topButtonContainer = document.createElement('div')
+topButtonContainer.setAttribute('id', 'topButtonContainer')
+document.body.appendChild(topButtonContainer)
+window.addEventListener('load', function(){
+  let topButton = document.createElement('div')
+  topButton.classList.add('topButton')
+  topButtonContainer.appendChild(topButton)
+}, false)
+window.addEventListener('scroll', function(){
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250){
+    topButtonContainer.style.display = 'block'
+  } else {
+    topButtonContainer.style.display = 'none'
+  }
+}, false)
+topButtonContainer.addEventListener('click', function(){
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }, false)
