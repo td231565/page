@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+body {
+  font-family: 'Anton', sans-serif;
+  color: #14fe17;
+  background-color: #272b23;
+}
+
+body::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), 1px, transparent 1px, transparent 2px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+ul > li > a {
+  color: #14fe17;
+}
+
+#topNavContainer ul#topNav {
+  position: relative;
+  padding: 0;
+  margin: auto;
+  font-size: 30px;
+  width: 96.5%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#topNavContainer ul#topNav li.nav-item {
+  position: relative;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+#topNavContainer ul#topNav li.nav-item.active::before {
+  content: "";
+  position: absolute;
+  background-color: #272b23;
+  width: 100%;
+  height: 31px;
+  top: 31px;
+  left: 0;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  z-index: -1;
+}
+
+#topNavContainer ul#topNav .nav-link {
+  background-color: #272b23;
+  opacity: 0.6;
+}
+
+#topNavContainer ul#topNav .nav-link.active {
+  color: #14fe17;
+  opacity: 1;
+}
+
+#topNavContainer ul#topNav .nav-link:hover {
+  color: #14fe17;
+  opacity: 1;
+}
+
+#topNavContainer #topNav::before, #topNavContainer #topNav::after {
+  height: 6px;
+  width: 1px;
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #14fe17;
+  bottom: -6px;
+}
+
+#topNavContainer #topNav::before {
+  left: 0;
+}
+
+#topNavContainer #topNav::after {
+  right: 0;
+}
+
+#subNavContainer {
+  margin: auto;
+  width: 96.5%;
+  font-size: 24px;
+  border-top: 1px solid;
+}
+
+#subNavContainer #subNav {
+  border: none;
+}
+
+#subNavContainer #subNav .nav-item {
+  margin-left: 40px;
+}
+
+#subNavContainer #subNav .nav-link {
+  color: #14fe17;
+  opacity: 0.3;
+}
+
+#subNavContainer #subNav .nav-link.active {
+  color: #14fe17;
+  opacity: 1;
+  background-color: #272b23;
+  border: none;
+}
+
+#subNavContainer #subNav .nav-link.active + .nav-link {
+  color: #14fe17;
+  opacity: 1;
+}
+
+#subNavContainer #subNav .nav-link:hover {
+  color: #14fe17;
+  opacity: 1;
+  border: none;
+}
+
+#subNavContainer #subNav .nav-link.active:hover {
+  color: #14fe17;
+}
+
+#tabContent #status #statBarContainer {
+  margin: auto;
+  width: 45%;
+  min-width: 480px;
+}
+
+#tabContent #status #statBarContainer .row {
+  margin-top: 10px;
+  margin-bottom: 120px;
+}
+
+#tabContent #status #statBarContainer .stat-bar {
+  margin: auto;
+  width: 37px;
+  height: 8px;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress {
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .lvIndicator {
+  width: 70%;
+  height: 100%;
+  background-color: #14fe17;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .w20 {
+  width: 20%;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .w40 {
+  width: 40%;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .w70 {
+  width: 70%;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .w80 {
+  width: 80%;
+}
+
+#tabContent #status #statBarContainer .stat-bar .lvProgress .w90 {
+  width: 90%;
+}
+
+#tabContent #status #statBarContainer .row:nth-of-type(4) {
+  margin-bottom: 43px;
+}
+
+#tabContent #status .center-image {
+  position: absolute;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0;
+  width: 100%;
+  top: 89px;
+}
+
+#tabContent #status .center-image img {
+  margin: auto;
+  display: block;
+  position: relative;
+  max-height: 300px;
+  -webkit-filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(12) brightness(0.7) contrast(1.5);
+          filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(12) brightness(0.7) contrast(1.5);
+}
+
+#tabContent #status #equipment {
+  margin: auto;
+  width: 50%;
+}
+
+#tabContent #status #equipment .row > div {
+  margin: 4px;
+  margin-top: 15px;
+  background-color: #10ff0026;
+}
+
+#tabContent #status #equipment .row > div img {
+  -webkit-filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+          filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
+#tabContent #status #equipment .row {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+}
+
+#tabContent #status #equipment .row div:nth-child(1) {
+  background-color: #272b23;
+}
+
+#tabContent #status #equipment .row div:nth-child(2) img {
+  width: 100%;
+  min-width: 52px;
+}
+
+#tabContent #status #equipment .row div:nth-child(3) {
+  padding-top: 10px;
+}
+
+#tabContent #status #equipment .row div:nth-child(3) img {
+  width: 20px;
+}
+
+#tabContent #status #equipment .row div:nth-child(4) {
+  background-color: #272b23;
+}
+
+#tabContent #status #equipment .row div:nth-child(5) img {
+  margin-top: 5px;
+  width: 85%;
+  min-width: 45px;
+}
+
+#tabContent #status #equipment .row div:nth-child(6) {
+  padding-top: 10px;
+}
+
+#tabContent #status #equipment .row div:nth-child(6) img {
+  width: 22px;
+  height: 18px;
+}
+
+#tabContent #status #equipment .row div:nth-child(7) {
+  padding-top: 10px;
+}
+
+#tabContent #status #equipment .row div:nth-child(7) img {
+  width: 23px;
+}
+
+#bp-footer {
+  position: fixed;
+  width: 97%;
+  bottom: 0;
+  margin: 15px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  border-bottom: 1px solid #14fe17;
+}
+
+#bp-footer .foo-item {
+  margin: 0 3px;
+  background: #10ff0026;
+}
+
+#bp-footer .foo-item.col-8 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 64.6%;
+          flex: 0 0 64.6%;
+}
+
+#bp-footer #lvProgress {
+  display: inline-block;
+  margin: 0 13px;
+  width: 70%;
+  height: 10px;
+  border: 1px solid;
+}
+
+#bp-footer #lvIndicator {
+  width: 60%;
+  height: 10px;
+  background-color: #14fe17;
+}
+
+#bp-footer::before, #bp-footer::after {
+  height: 6px;
+  width: 1px;
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #14fe17;
+  bottom: 0;
+}
+
+#bp-footer::before {
+  left: 0;
+}
+
+#bp-footer::after {
+  right: 0;
+}
+/*# sourceMappingURL=bp.css.map */
