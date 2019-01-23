@@ -22,36 +22,50 @@
     </div>
     <!-- sub nav -->
     <div id="subNavContainer">
-        <ul class="nav nav-tabs" id="subNav">
+        <ul class="nav nav-tabs" id="subNav-stat">
             <li class="nav-item"><a href="#status" class="nav-link active" data-toggle="tab">STATUS</a></li>
             <li class="nav-item"><a href="#special" class="nav-link" data-toggle="tab">SPECIAL</a></li>
             <li class="nav-item"><a href="#perks" class="nav-link" data-toggle="tab">PERKS</a></li>
         </ul>
+        <ul class="nav nav-tabs" id="subNav-inv">
+            <li class="nav-item"><a href="#weapons" class="nav-link active" data-toggle="tab">WEAPONS</a></li>
+            <li class="nav-item"><a href="#armor" class="nav-link" data-toggle="tab">ARMOR</a></li>
+            <li class="nav-item"><a href="#aid" class="nav-link" data-toggle="tab">AID</a></li>
+        </ul>
     </div>
-    <!-- content -->
-    <div class="tab-content" id="tabContent">
-        <div class="tab-pane active" id="status" role="tabpanel">
-            <div id="statBarContainer">
-                <div class="row"><div class="col-12"><div class="stat-bar">STR<div class="lvProgress"><div class="lvIndicator w20"></div></div></div></div></div>
-                <div class="row"><div class="col-3"><div class="stat-bar">DEX<div class="lvProgress"><div class="lvIndicator w70"></div></div></div></div><div class="col-6"></div><div class="col-3"><div class="stat-bar">AGI<div class="lvProgress"><div class="lvIndicator w40"></div></div></div></div></div>
-                <div class="row"><div class="col-3"><div class="stat-bar">INT<div class="lvProgress"><div class="lvIndicator w90"></div></div></div></div><div class="col-6"></div><div class="col-3"><div class="stat-bar">CON<div class="lvProgress"><div class="lvIndicator w70"></div></div></div></div></div>
-                <div class="row"><div class="col-12"><div class="stat-bar">VIT<div class="lvProgress"><div class="lvIndicator w80"></div></div></div></div></div>
-            </div>
-            <div class="center-image"><img src="img/shin.jpg"></div>
-            <div id="equipment">
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-2"><img src="img/gun.png"></div>
-                    <div class="col-1"><img src="img/crosshair.png">18</div>
-                    <div class="col-1"></div>
-                    <div class="col-2"><img src="img/helmet.png"></div>
-                    <div class="col-1"><img src="img/energeN.png">20</div>
-                    <div class="col-1"><img src="img/radiation.png">25</div>
+    <!-- tab content -->
+    <div id="tabContent">
+        <!-- STAT -->
+        <section class="tab-content" id="tabStat">
+            <div class="tab-pane active" id="status" role="tabpanel">
+                <div id="statBarContainer">
+                    <div class="row"><div class="col-12"><div class="stat-bar">STR<div class="lvProgress"><div class="lvIndicator w20"></div></div></div></div></div>
+                    <div class="row"><div class="col-3"><div class="stat-bar">DEX<div class="lvProgress"><div class="lvIndicator w70"></div></div></div></div><div class="col-6"></div><div class="col-3"><div class="stat-bar">AGI<div class="lvProgress"><div class="lvIndicator w40"></div></div></div></div></div>
+                    <div class="row"><div class="col-3"><div class="stat-bar">INT<div class="lvProgress"><div class="lvIndicator w90"></div></div></div></div><div class="col-6"></div><div class="col-3"><div class="stat-bar">CON<div class="lvProgress"><div class="lvIndicator w70"></div></div></div></div></div>
+                    <div class="row"><div class="col-12"><div class="stat-bar">VIT<div class="lvProgress"><div class="lvIndicator w80"></div></div></div></div></div>
+                </div>
+                <div class="center-image"><img src="img/shin.jpg"></div>
+                <div id="equipment">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2"><img src="img/gun.png"></div>
+                        <div class="col-1"><img src="img/crosshair.png">18</div>
+                        <div class="col-1"></div>
+                        <div class="col-2"><img src="img/helmet.png"></div>
+                        <div class="col-1"><img src="img/energeN.png">20</div>
+                        <div class="col-1"><img src="img/radiation.png">25</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="tab-pane" id="special" role="tabpanel">special</div>
-        <div class="tab-pane" id="perks" role="tabpanel">perks</div>
+            <div class="tab-pane" id="special" role="tabpanel">special</div>
+            <div class="tab-pane" id="perks" role="tabpanel">perks</div>
+        </section>
+        <!-- INV -->
+        <section class="tab-content" id="tabInv">
+            <div class="tab-pane active" id="weapons" role="tabpanel"></div>
+            <div class="tab-pane" id="armor" role="tabpanel">armor</div>
+            <div class="tab-pane" id="aid" role="tabpanel">aid</div>
+        </section>
     </div>
     <!-- footer -->
     <div class="nav" id="bp-footer">

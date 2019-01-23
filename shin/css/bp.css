@@ -92,38 +92,38 @@ ul > li > a {
   border-top: 1px solid;
 }
 
-#subNavContainer #subNav {
+#subNavContainer ul.nav.nav-tabs {
   border: none;
 }
 
-#subNavContainer #subNav .nav-item {
+#subNavContainer ul.nav.nav-tabs .nav-item {
   margin-left: 40px;
 }
 
-#subNavContainer #subNav .nav-link {
+#subNavContainer ul.nav.nav-tabs .nav-link {
   color: #14fe17;
   opacity: 0.3;
 }
 
-#subNavContainer #subNav .nav-link.active {
+#subNavContainer ul.nav.nav-tabs .nav-link.active {
   color: #14fe17;
   opacity: 1;
   background-color: #272b23;
   border: none;
 }
 
-#subNavContainer #subNav .nav-link.active + .nav-link {
+#subNavContainer ul.nav.nav-tabs .nav-link.active + .nav-link {
   color: #14fe17;
   opacity: 1;
 }
 
-#subNavContainer #subNav .nav-link:hover {
+#subNavContainer ul.nav.nav-tabs .nav-link:hover {
   color: #14fe17;
   opacity: 1;
   border: none;
 }
 
-#subNavContainer #subNav .nav-link.active:hover {
+#subNavContainer ul.nav.nav-tabs .nav-link.active:hover {
   color: #14fe17;
 }
 

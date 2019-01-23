@@ -84,7 +84,7 @@ ul > li > a {
     width: 96.5%;
     font-size: 24px;
     border-top: 1px solid;
-    #subNav {
+    ul.nav.nav-tabs {
         border: none;
         .nav-item {
             margin-left: 40px;
@@ -112,6 +112,9 @@ ul > li > a {
             color: $text-color;
         }
     }
+    // .nav.nav-tabs.hide {
+    //     display: none;
+    // }
 }
 #tabContent {
     #status {
