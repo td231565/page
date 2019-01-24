@@ -63,4 +63,59 @@ window.addEventListener('load', function(){
             e.target.parentElement.className += " active"
         }
     }, false)
-})
+    // weapons
+    const weapons = [
+        {
+            "name": "44_pistol",
+            "damage": 48,
+            "fire_rate": 6,
+            "range": 119,
+            "accuracy": 66,
+            "weight": 4.2,
+            "value": 99
+        },
+        {
+            "name": "10mm_pistol",
+            "damage": 18,
+            "fire_rate": 46,
+            "range": 119,
+            "accuracy": 61,
+            "weight": 4.2,
+            "value": 53
+        },
+        {
+            "name": "assault_rifle",
+            "damage": 30,
+            "fire_rate": 40,
+            "range": 119,
+            "accuracy": 72,
+            "weight": 13.1,
+            "value": 144
+        }
+    ]
+    const weaponList = document.getElementById("weaponList")
+    weaponList.addEventListener('click', function(e){
+        // weapons list
+        let a = weaponList.getElementsByTagName("a")
+        if (e.target.tagName.toLowerCase() === "a"){
+            for (let i=0; i<a.length; i++){
+                a[i].classList.remove("active")
+            }
+            e.target.classList.add("active")
+        }
+        // weapons information
+        for (item in weapons){
+            if (weapons[item].name+" active" === e.target.className){
+                let weaponsInfo = document.getElementById("weaponsInfo")
+                weaponsInfo.getElementsByClassName("damage")[0].textContent = weapons[item].damage
+                weaponsInfo.getElementsByClassName("fire_rate")[0].textContent = weapons[item].fire_rate
+                weaponsInfo.getElementsByClassName("range")[0].textContent = weapons[item].range
+                weaponsInfo.getElementsByClassName("accuracy")[0].textContent = weapons[item].accuracy
+                weaponsInfo.getElementsByClassName("weight")[0].textContent = weapons[item].weight
+                weaponsInfo.getElementsByClassName("value")[0].textContent = weapons[item].value
+            }
+        }
+    }, false)
+
+
+}, false)

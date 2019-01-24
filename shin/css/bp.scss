@@ -112,119 +112,162 @@ ul > li > a {
             color: $text-color;
         }
     }
-    // .nav.nav-tabs.hide {
-    //     display: none;
-    // }
 }
 #tabContent {
-    #status {
-        #statBarContainer {
-            margin: auto;
-            width: 45%;
-            min-width: 480px;
-            .row {
-                margin-top: 10px;
-                margin-bottom: 120px;
-            }
-            .stat-bar {
+    #tabStat {
+        #status {
+            #statBarContainer {
                 margin: auto;
-                width: 37px;
-                height: 8px;
-                .lvProgress {
-                    width: 100%;
-                    height: 100%;
-                    border: 1px solid;
-                    .lvIndicator {
-                        width: 70%;
-                        height: 100%;
-                        background-color: $text-color;
-                    }
-                    .w20 {
-                        width: 20%;
-                    }
-                    .w40 {
-                        width: 40%;
-                    }
-                    .w70 {
-                        width: 70%;
-                    }
-                    .w80 {
-                        width: 80%;
-                    }
-                    .w90 {
-                        width: 90%;
-                    }
+                width: 45%;
+                min-width: 480px;
+                .row {
+                    margin-top: 10px;
+                    margin-bottom: 120px;
                 }
-            }
-            .row:nth-of-type(4) {
-                margin-bottom: 43px;
-            }
-        }
-        .center-image {
-            position: absolute;
-            margin: auto;
-            margin-top: 100px;
-            padding: 0;
-            width: 100%;
-            top: 89px;
-            img {
-                margin: auto;
-                display: block;
-                position: relative;
-                max-height: 300px;
-                filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(12) brightness(0.7) contrast(1.5);
-            }
-        }
-        #equipment {
-            margin: auto;
-            width: 50%;
-            .row > div {
-                margin: 4px;
-                margin-top: 15px;
-                background-color: $itemBg-color;
-                img {
-                    filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
-                }
-            }
-            .row {
-                flex-wrap: nowrap;
-                text-align: center;
-                div:nth-child(1) {
-                    background-color: $bg-color;
-                }
-                div:nth-child(2) {
-                    img {
+                .stat-bar {
+                    margin: auto;
+                    width: 37px;
+                    height: 8px;
+                    .lvProgress {
                         width: 100%;
-                        min-width: 52px;
+                        height: 100%;
+                        border: 1px solid;
+                        .lvIndicator {
+                            width: 70%;
+                            height: 100%;
+                            background-color: $text-color;
+                        }
+                        .w20 {
+                            width: 20%;
+                        }
+                        .w40 {
+                            width: 40%;
+                        }
+                        .w70 {
+                            width: 70%;
+                        }
+                        .w80 {
+                            width: 80%;
+                        }
+                        .w90 {
+                            width: 90%;
+                        }
                     }
                 }
-                div:nth-child(3) {
-                    padding-top: 10px;
+                .row:nth-of-type(4) {
+                    margin-bottom: 43px;
+                }
+            }
+            .center-image {
+                position: absolute;
+                margin: auto;
+                margin-top: 100px;
+                padding: 0;
+                width: 100%;
+                top: 89px;
+                img {
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    max-height: 300px;
+                    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(12) brightness(0.7) contrast(1.5);
+                }
+            }
+            #equipment {
+                margin: auto;
+                width: 50%;
+                .row > div {
+                    margin: 4px;
+                    margin-top: 15px;
+                    background-color: $itemBg-color;
                     img {
-                        width: 20px;
+                        filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
                     }
                 }
-                div:nth-child(4) {
-                    background-color: $bg-color;
-                }
-                div:nth-child(5) {
-                    img {
-                        margin-top: 5px;
-                        width: 85%;
-                        min-width: 45px;
+                .row {
+                    flex-wrap: nowrap;
+                    text-align: center;
+                    div:nth-child(1) {
+                        background-color: $bg-color;
+                    }
+                    div:nth-child(2) {
+                        img {
+                            width: 100%;
+                            min-width: 52px;
+                        }
+                    }
+                    div:nth-child(3) {
+                        padding-top: 10px;
+                        img {
+                            width: 20px;
+                        }
+                    }
+                    div:nth-child(4) {
+                        background-color: $bg-color;
+                    }
+                    div:nth-child(5) {
+                        img {
+                            margin-top: 5px;
+                            width: 85%;
+                            min-width: 45px;
+                        }
+                    }
+                    div:nth-child(6) {
+                        padding-top: 10px;
+                        img {
+                            width: 22px;
+                            height: 18px;
+                        }
+                    }
+                    div:nth-child(7) {
+                        padding-top: 10px;
+                        img {
+                            width: 23px;
+                        }
                     }
                 }
-                div:nth-child(6) {
-                    padding-top: 10px;
-                    img {
-                        width: 22px;
-                        height: 18px;
+            }
+        }
+    }
+    #tabInv {
+        #weapons {
+            margin-top: 20px;
+            width: 100%;
+            ul.item-list {
+                list-style: none;
+                li {
+                    margin: 5px 0;
+                    a {
+                        display: block;
+                        width: 300px;
+                        padding: 5px 10px;
+                        border-radius:2px;
+                    }
+                    a.active {
+                        text-decoration: none;
+                        color: $bg-color;
+                        background-color: $border-color;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: $bg-color;
+                        background-color: $border-color;
                     }
                 }
-                div:nth-child(7) {
-                    padding-top: 10px;
-                    img {
-                        width: 23px;
+            }
+            .item-stats {
+                position: absolute;
+                width: 30%;
+                bottom: 150px;
+                right: 100px;
+                .row-highlight {
+                    .row {
+                        margin: 4px;
+                        color: $text-color;
+                        background-color: $itemBg-color;
+                        .col-6 {
+                            flex: 0 0 63%;
+                        }
                     }
                 }
             }

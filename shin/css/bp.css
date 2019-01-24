@@ -127,60 +127,60 @@ ul > li > a {
   color: #14fe17;
 }
 
-#tabContent #status #statBarContainer {
+#tabContent #tabStat #status #statBarContainer {
   margin: auto;
   width: 45%;
   min-width: 480px;
 }
 
-#tabContent #status #statBarContainer .row {
+#tabContent #tabStat #status #statBarContainer .row {
   margin-top: 10px;
   margin-bottom: 120px;
 }
 
-#tabContent #status #statBarContainer .stat-bar {
+#tabContent #tabStat #status #statBarContainer .stat-bar {
   margin: auto;
   width: 37px;
   height: 8px;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress {
   width: 100%;
   height: 100%;
   border: 1px solid;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .lvIndicator {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .lvIndicator {
   width: 70%;
   height: 100%;
   background-color: #14fe17;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .w20 {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .w20 {
   width: 20%;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .w40 {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .w40 {
   width: 40%;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .w70 {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .w70 {
   width: 70%;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .w80 {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .w80 {
   width: 80%;
 }
 
-#tabContent #status #statBarContainer .stat-bar .lvProgress .w90 {
+#tabContent #tabStat #status #statBarContainer .stat-bar .lvProgress .w90 {
   width: 90%;
 }
 
-#tabContent #status #statBarContainer .row:nth-of-type(4) {
+#tabContent #tabStat #status #statBarContainer .row:nth-of-type(4) {
   margin-bottom: 43px;
 }
 
-#tabContent #status .center-image {
+#tabContent #tabStat #status .center-image {
   position: absolute;
   margin: auto;
   margin-top: 100px;
@@ -189,7 +189,7 @@ ul > li > a {
   top: 89px;
 }
 
-#tabContent #status .center-image img {
+#tabContent #tabStat #status .center-image img {
   margin: auto;
   display: block;
   position: relative;
@@ -198,70 +198,121 @@ ul > li > a {
           filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(12) brightness(0.7) contrast(1.5);
 }
 
-#tabContent #status #equipment {
+#tabContent #tabStat #status #equipment {
   margin: auto;
   width: 50%;
 }
 
-#tabContent #status #equipment .row > div {
+#tabContent #tabStat #status #equipment .row > div {
   margin: 4px;
   margin-top: 15px;
   background-color: #10ff0026;
 }
 
-#tabContent #status #equipment .row > div img {
+#tabContent #tabStat #status #equipment .row > div img {
   -webkit-filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
           filter: grayscale(1) brightness(100) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
 }
 
-#tabContent #status #equipment .row {
+#tabContent #tabStat #status #equipment .row {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   text-align: center;
 }
 
-#tabContent #status #equipment .row div:nth-child(1) {
+#tabContent #tabStat #status #equipment .row div:nth-child(1) {
   background-color: #272b23;
 }
 
-#tabContent #status #equipment .row div:nth-child(2) img {
+#tabContent #tabStat #status #equipment .row div:nth-child(2) img {
   width: 100%;
   min-width: 52px;
 }
 
-#tabContent #status #equipment .row div:nth-child(3) {
+#tabContent #tabStat #status #equipment .row div:nth-child(3) {
   padding-top: 10px;
 }
 
-#tabContent #status #equipment .row div:nth-child(3) img {
+#tabContent #tabStat #status #equipment .row div:nth-child(3) img {
   width: 20px;
 }
 
-#tabContent #status #equipment .row div:nth-child(4) {
+#tabContent #tabStat #status #equipment .row div:nth-child(4) {
   background-color: #272b23;
 }
 
-#tabContent #status #equipment .row div:nth-child(5) img {
+#tabContent #tabStat #status #equipment .row div:nth-child(5) img {
   margin-top: 5px;
   width: 85%;
   min-width: 45px;
 }
 
-#tabContent #status #equipment .row div:nth-child(6) {
+#tabContent #tabStat #status #equipment .row div:nth-child(6) {
   padding-top: 10px;
 }
 
-#tabContent #status #equipment .row div:nth-child(6) img {
+#tabContent #tabStat #status #equipment .row div:nth-child(6) img {
   width: 22px;
   height: 18px;
 }
 
-#tabContent #status #equipment .row div:nth-child(7) {
+#tabContent #tabStat #status #equipment .row div:nth-child(7) {
   padding-top: 10px;
 }
 
-#tabContent #status #equipment .row div:nth-child(7) img {
+#tabContent #tabStat #status #equipment .row div:nth-child(7) img {
   width: 23px;
+}
+
+#tabContent #tabInv #weapons {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#tabContent #tabInv #weapons ul.item-list {
+  list-style: none;
+}
+
+#tabContent #tabInv #weapons ul.item-list li {
+  margin: 5px 0;
+}
+
+#tabContent #tabInv #weapons ul.item-list li a {
+  display: block;
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+#tabContent #tabInv #weapons ul.item-list li a.active {
+  text-decoration: none;
+  color: #272b23;
+  background-color: #14fe17;
+}
+
+#tabContent #tabInv #weapons ul.item-list li a:hover {
+  text-decoration: none;
+  color: #272b23;
+  background-color: #14fe17;
+}
+
+#tabContent #tabInv #weapons .item-stats {
+  position: absolute;
+  width: 30%;
+  bottom: 150px;
+  right: 100px;
+}
+
+#tabContent #tabInv #weapons .item-stats .row-highlight .row {
+  margin: 4px;
+  color: #14fe17;
+  background-color: #10ff0026;
+}
+
+#tabContent #tabInv #weapons .item-stats .row-highlight .row .col-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 63%;
+          flex: 0 0 63%;
 }
 
 #bp-footer {
