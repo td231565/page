@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300");
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+#topNav {
+  position: relative;
+  width: 100%;
+  height: 105px;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #E10012;
+}
+
+#topNav > a.brand {
+  display: none;
+  margin: auto;
+}
+
+#topNav #topNavContainer ul.navbar-nav {
+  margin: auto;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item a {
+  color: #000;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item ul.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item ul.dropdown-menu div.dropdown-item-container {
+  margin-top: 17px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: .25rem;
+  -webkit-box-shadow: 1px 1px 2px;
+          box-shadow: 1px 1px 2px;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item ul.dropdown-menu li.dropdown-item {
+  text-align: center;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item ul.dropdown-menu li.dropdown-item a {
+  text-decoration: none;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item ul.dropdown-menu:hover {
+  display: block;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item.brand {
+  display: block;
+  text-align: center;
+  width: 200px;
+}
+
+#topNav #topNavContainer ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  display: block;
+}
+
+#topNav .member-icon {
+  position: absolute;
+  width: 90px;
+  top: 30px;
+  right: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#topNav .member-icon .icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+#topNav .member-icon .icon a.text {
+  position: absolute;
+  top: 6px;
+  left: 5.5px;
+  line-height: 1;
+  opacity: 0;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#topNav .member-icon .icon a.text:hover {
+  opacity: 1;
+}
+
+#topNav .member-icon .icon.login {
+  background-image: url(../img/icon/login.png);
+  background-size: cover;
+}
+
+#topNav .member-icon .icon.trolly {
+  background-image: url(../img/icon/trolly.png);
+  background-size: cover;
+}
+
+#topNav .member-icon .icon.trolly a.text {
+  top: 12px;
+}
+
+#topNav .member-icon .icon:hover {
+  background-image: none;
+  background-color: #808080;
+  border-radius: 99rem;
+}
+
+#topNav button.navbar-toggler {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  background-color: #808080;
+  border-radius: 999rem;
+}
+
+#topNav button.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+#indexCarousel a {
+  width: 100px;
+  top: 30%;
+  bottom: 30%;
+  background-color: #fff;
+}
+
+#indexCarousel a .prev {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23424242' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+#indexCarousel a .next {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23424242' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.inner-banner {
+  margin: 30px 10px;
+  background-image: url(../img/banner-bg-image.jpg);
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner-banner .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 150px;
+}
+
+.inner-banner .text button {
+  width: 173px;
+  height: 40px;
+  line-height: 0;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 35px;
+  color: #fff;
+  background-color: #E10012;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.inner-banner .text button:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.footer-container {
+  background-color: #E10012;
+}
+
+.footer-container .footer-top {
+  width: 80%;
+  margin: auto;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-container .footer-top .buttons button {
+  width: 156px;
+  height: 36px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  margin: 0 15px 15px 15px;
+  padding: 5px 20px;
+  line-height: 0;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.footer-container .footer-top .wantmore {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.footer-container .footer-top .wantmore form {
+  position: relative;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.footer-container .footer-top .wantmore form .input-text {
+  width: 100%;
+  margin: 2px 0;
+  padding: 8px;
+  font-size: 12px;
+  color: #424242;
+  background-color: #fff;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.footer-container .footer-top .wantmore form .input-text::-webkit-input-placeholder {
+  color: #E10012;
+  letter-spacing: 1px;
+}
+
+.footer-container .footer-top .wantmore form .input-text:-ms-input-placeholder {
+  color: #E10012;
+  letter-spacing: 1px;
+}
+
+.footer-container .footer-top .wantmore form .input-text::-ms-input-placeholder {
+  color: #E10012;
+  letter-spacing: 1px;
+}
+
+.footer-container .footer-top .wantmore form .input-text::placeholder {
+  color: #E10012;
+  letter-spacing: 1px;
+}
+
+.footer-container .footer-top .wantmore form .input-text:focus {
+  border: 1px solid #424242;
+}
+
+.footer-container .footer-top .wantmore form .btn-submit {
+  position: absolute;
+  top: 36px;
+  right: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-container .footer-top .wantmore form .btn-submit::after {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #E10012;
+  border-right: 2px solid #E10012;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.footer-container .footer-top .wantmore .epaper-result {
+  width: 200px;
+  height: 100px;
+}
+
+.footer-container .footer-inner {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 15px;
+  color: #fff;
+  line-height: 20px;
+  border-top: 1px solid #E94D5A;
+  border-bottom: 1px solid #E94D5A;
+}
+
+.footer-container .footer-bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-container .footer-bottom img {
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px;
+}
+
+@media (max-width: 991.98px) {
+  #topNav > a.brand {
+    display: block;
+  }
+  #topNav ul.navbar-nav li.nav-item.brand {
+    display: none;
+  }
+  #topNav ul.navbar-nav li.nav-item.brand a.brand {
+    display: none;
+  }
+  #topNav ul.navbar-nav li.dropdown ul.dropdown-menu {
+    position: absolute;
+    top: -24px;
+    left: 135px;
+  }
+  #topNav .collapsing, #topNav .collapse.show {
+    position: absolute !important;
+    z-index: 20;
+    width: 150px;
+    padding: 0 15px;
+    top: 105px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: .25rem;
+    -webkit-box-shadow: 1px 1px 2px;
+            box-shadow: 1px 1px 2px;
+  }
+  #topNav .collapse.show {
+    display: block;
+  }
+  #topNav .navbar-collapse {
+    max-height: none !important;
+  }
+  .inner-banner .text {
+    display: block;
+    width: 220px;
+    padding: 0 15px;
+  }
+  .inner-banner .text button {
+    margin: 15px 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

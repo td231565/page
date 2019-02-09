@@ -279,11 +279,11 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url(img/sea.jpg);
+  background-image: url(img/night101.jpg);
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-size: auto;
-  border-radius: 8px;
+  border-radius: 1rem;
 }
 #view .section.s1 {
   background-position: center top;
