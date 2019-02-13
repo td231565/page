@@ -3,7 +3,7 @@ const topnav = document.getElementById('topnav')
 window.addEventListener('load', function(){
   topnav.innerHTML = '<a class="active" href="#slide">home</a>'
   topnav.innerHTML += '<a href="#profile">profile</a>'
-  topnav.innerHTML += '<a href="#about">about</a>'
+  topnav.innerHTML += '<a href="#about">projects</a>'
   topnav.innerHTML += '<a href="#contact">contact</a>'
 }, false)
 topnav.addEventListener('click', function(e){
@@ -24,11 +24,18 @@ topnav.addEventListener('click', function(e){
 }, false)
 window.addEventListener('scroll', function(){
   let slide = document.getElementById('slide')
+  let topnavLinks = topnav.getElementsByTagName('a')
   if(window.scrollY >= slide.offsetHeight){
     topnav.classList.add('sticky')
+    for (let i=0; i<topnavLinks.length; i++){
+      topnavLinks[i].classList.add('sticky')
+    }
     document.body.style.paddingTop = topnav.offsetHeight+'px'
   } else {
     topnav.classList.remove('sticky')
+    for (let i=0; i<topnavLinks.length; i++){
+      topnavLinks[i].classList.remove('sticky')
+    }
     document.body.style.paddingTop = 0
   }
 }, false)
@@ -54,8 +61,8 @@ window.addEventListener('load', function(){
   let list = document.createElement('ul')
   contact.appendChild(list)
   list.innerHTML = '<li>Email：td231565@gmail.com</li>'
-  list.innerHTML += '<li>電話：0910110816</li>'
   list.innerHTML += '<li>時間：9:00am~6:00pm</li>'
+  list.innerHTML += '<li>求職地點：台北市</li>'
   // contact.innerHTML += '<iframe width="400" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCduUd6dD1y-JHVCBa3wJudKbSbLaCyG0E&q=台北市政府" allowfullscreen></iframe>'
 }, false)
 // topButton
