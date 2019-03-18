@@ -33,7 +33,7 @@ function showSelects(e){
     optionInit.setAttribute('value', '請選擇')
     select.appendChild(optionInit)
     // show options
-    for (let i=1, l = optionPicked.length+1; i<l; i++){
+    for (let i=0, l = optionPicked.length; i<l; i++){
         let option = document.createElement('option')
         option.textContent = optionPicked[i]
         option.setAttribute('value', optionPicked[i])
