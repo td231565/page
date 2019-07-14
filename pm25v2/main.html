@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>空氣品質AQI 監測數值</title>
+  <link rel="stylesheet" href="./all.css">
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+
+  <script type="text/x-template" id="container-component">
+    <div class="container">
+      <div class="left">
+        <header class="header">
+          <!-- 在父層的 template 中 v-bind 父層資料 -->
+          <city-component
+            :parent-data="aqiData">
+          </city-component>
+          <div class="city">
+            <p v-for="city of cityList">{{ city }}</p>
+          </div>
+        </header>
+        <section class="section">
+          <div class="card">
+            <div class="content">
+              <p>PM2.5: 10</p>
+              <p>PM10: 50</p>
+              <p>CO2: 3</p>
+            </div>
+            <div class="site">
+              <p id="currSite">選擇測站</p>
+              <p>松山</p>
+              <p>中正</p>
+              <p>中山</p>
+              <p>大安</p>
+              <p>大同</p>
+            </div>
+            <div class="aqi-concentrate">16</div>
+          </div>
+        </section>
+      </div>
+  
+      <div class="right">
+        <div class="content">
+          <p>數值說明</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script src="./main.js"></script>
+</body>
+</html>

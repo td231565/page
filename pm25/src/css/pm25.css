@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#header {
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #9eb6fa;
+  font-size: 20px;
+  z-index: 9;
+}
+
+#view {
+  margin-top: 30px;
+  z-index: 1;
+}
+
+#select {
+  width: 130px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 10px;
+  border-color: #71a3f2;
+}
+
+#cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  /* position for .help */
+  margin: 20px;
+  width: 280px;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 6px 1px #505151;
+          box-shadow: 3px 3px 6px 1px #505151;
+  overflow: visible;
+}
+
+.card .cardHeader {
+  padding: 10px;
+  background-color: #71a3f2;
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+}
+
+.card .cardContent {
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  width: 200px;
+}
+
+.card .helpIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.card .help {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 170px;
+  right: -120px;
+  padding: 10px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0.5px 0.5px 1px 0.5px #505151;
+          box-shadow: 0.5px 0.5px 1px 0.5px #505151;
+  font-size: 13px;
+  z-index: 8;
+}
+
+.card .help .low {
+  color: #018b01;
+}
+
+.card .help .medium {
+  color: #faac03;
+}
+
+.card .help .high {
+  color: #fd2c2c;
+}
+
+.card .help .reallyhigh {
+  color: #e903e9;
+}
+
+.card .helpIcon:hover ~ .help {
+  display: block;
+}
+
+.card .help:hover {
+  display: block;
+}
+
+#cardContainer .hello {
+  font-size: 200px;
+  color: #71a3f2;
+  text-align: center;
+  line-height: 300px;
+  text-shadow: 2px 2px #757575;
+  opacity: 0.6;
+}
+
+.spaceTop {
+  height: 70px;
+}
+
+.spaceBottom {
+  height: 240px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background-color: #1048a3;
+}
+
+footer .contact-box {
+  padding: 15px;
+}
+
+footer .contact-box a {
+  display: block;
+}
+
+footer .contact-box a:visited {
+  color: #fff;
+}
+
+footer .contact-box a:hover {
+  color: #adff2f;
+}
+
+footer .contact-box a:active {
+  color: #74ac21;
+  -webkit-transform: translate(0px, 1px);
+          transform: translate(0px, 1px);
+}
+/*# sourceMappingURL=pm25.css.map */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>拖拉視窗</title>
+  <link rel="stylesheet" href="./all.css">
+</head>
+
+<body>
+  <div class="toolbar">
+    <div class="icon-box file"><icon class="file"></icon></div>
+    <textarea name="" id="text" placeholder="輸入視窗內容 innerHTML"></textarea>
+  </div>
+  <div class="box box-0">
+    <div class="moving-bar">
+      <div class="btn close-btn"></div>
+      <div class="btn hide-btn"></div>
+    </div>
+    <div class="content">
+      <p>只有做右下角可以縮放，如果要做其他方向，要考慮邊界，如：左邊不能超過右邊、上面不能超過下面，因為懶所以有需要再做...</p>
+      <p>目前有一問題尚待解決：只要縮放大小，div會先變化width，才變化height，不知道是什麼原因。</p>
+    </div>
+    <div class="resizer"></div>
+  </div>
+
+
+  <script src="./js.js"></script>
+</body>
+</html>
