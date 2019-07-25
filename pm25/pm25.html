@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>PM2.5 測站數值</title>
-    <link rel="shortcut icon" href="./src/img/icon.png">
-    <link rel="stylesheet" href="./src/css/pm25.css">
+  <meta charset="UTF-8">
+  <title>PM2.5 測站數值</title>
+  <link rel="shortcut icon" href="./src/img/icon.png">
+  <link rel="stylesheet" href="./src/css/all.css">
 </head>
+
 <body>
-    <div id="header">請選擇縣市：<select id="select"></select></div>
-    <div id="view"></div>
+  <header>
+    <div class="select-box">
+      <div id="currCity">請選擇縣市</div>
+      <div id="citySelect"></div>
+    </div>
+    <!-- <select id="citySelect">
+      <option value="請選擇">請選擇縣市</option>
+    </select> -->
+  </header>
+  <section class="view">
+    <div id="cardContainer">
+      <div class="hello">PM2.5</div>
+    </div>
+  </section>
+  <footer>
+    <p>資料來源：<a href="https://opendata.epa.gov.tw/" target="_blank">行政院環境保護署環境資源資料開放平台</a></p>
+  </footer>
+  <div class="cover-layer">
+    <div class="loader"></div>
+    <p>讀取資料中，請稍等...</p>
+  </div>
 
-    <footer>
-      <div class="contact-box">
-        <p>資料來源：行政院環境保護署環境資源資料開放平台</p>
-        <p><a href="https://opendata.epa.gov.tw/">https://opendata.epa.gov.tw/</a></p>
-      </div>
-    </footer>
-
-    <script src="./src/js/pm25.js"></script>
+  <script src="./src/js/pm25.js"></script>
 </body>
 </html>
