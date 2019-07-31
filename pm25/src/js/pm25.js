@@ -7,8 +7,8 @@ const coverLayer = document.querySelector('.cover-layer')
 let aqiData = null
 // call AJAX from opendata
 ;(function() {
-  // let url = 'https://cors-anywhere.herokuapp.com/opendata.epa.gov.tw/api/v1/AQI?%24skip=0&%24top=1000&%24format=json'
-  let url = 'https://script.google.com/macros/s/AKfycbxVs_7NhpX-zUbz4LhovuhZ9E4u-VRzSr9IFBZhsrD9hMSoObi8/exec?url=https://opendata.epa.gov.tw/api/v1/AQI?%24skip=0&%24top=1000&%24format=json'
+  let url = 'https://cors-anywhere.herokuapp.com/opendata.epa.gov.tw/api/v1/AQI?%24skip=0&%24top=1000&%24format=json'
+  // let url = 'https://script.google.com/macros/s/AKfycbxVs_7NhpX-zUbz4LhovuhZ9E4u-VRzSr9IFBZhsrD9hMSoObi8/exec?url=https://opendata.epa.gov.tw/api/v1/AQI?%24skip=0&%24top=1000&%24format=json'
   fetch(url)
     .then(res => res.json())
     .then(json => {
