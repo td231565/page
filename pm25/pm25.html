@@ -9,18 +9,51 @@
 
 <body>
   <header>
-    <div class="select-box">
-      <div id="currCity">請選擇縣市</div>
-      <div id="citySelect"></div>
-    </div>
-    <!-- <select id="citySelect">
-      <option value="請選擇">請選擇縣市</option>
-    </select> -->
+    <section class="header-left">
+      <h1>空氣品質指標(AQI)</h1>
+      <div class="select-box-container">
+        <div class="select-box">
+          <div id="currCity">請選擇縣市</div>
+          <div class="city-selections"></div>
+        </div>
+      </div>
+    </section>
+    <ul class="header-right"></ul>
   </header>
   <section class="view">
-    <div id="cardContainer">
-      <div class="hello">PM2.5</div>
+    <div class="aqi-detail">
+      <ul class="header">
+        <li id="cityName"></li>
+        <li id="aqiValue"></li>
+      </ul>
+      <ul class="content">
+        <li>
+          <span class="sub-title"><h5>臭氧</h5><h6>O3 (ppb)</h6></span>
+          <span id="o3Value"></span>
+        </li>
+        <li>
+          <span class="sub-title"><h5>懸浮微粒</h5><h6>PM10 (μg/m³)</h6></span>
+          <span id="pm10Value"></span>
+        </li>
+        <li>
+          <span class="sub-title"><h5>細懸浮微粒</h5><h6>PM2.5 (μg/m³)</h6></span>
+          <span id="pm25Value"></span>
+        </li>
+        <li>
+          <span class="sub-title"><h5>一氧化碳</h5><h6>CO (ppm)</h6></span>
+          <span id="coValue"></span>
+        </li>
+        <li>
+          <span class="sub-title"><h5>二氧化硫</h5><h6>SO2 (ppb)</h6></span>
+          <span id="so2Value"></span>
+        </li>
+        <li>
+          <span class="sub-title"><h5>二氧化氮</h5><h6>NO2 (ppb)</h6></span>
+          <span id="no2Value"></span>
+        </li>
+      </ul>
     </div>
+    <div class="aqi-box"></div>
   </section>
   <footer>
     <p>資料來源：<a href="https://opendata.epa.gov.tw/" target="_blank">行政院環境保護署環境資源資料開放平台</a></p>
