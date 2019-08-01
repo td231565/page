@@ -97,8 +97,9 @@ header .select-box-container .select-box #currCity::after {
 }
 
 header .select-box-container .select-box .city-selections {
-  font-size: 20px;
   height: 252px;
+  margin-top: 5px;
+  font-size: 20px;
   overflow: auto;
 }
 
@@ -111,13 +112,13 @@ header .select-box-container .select-box .city-selections .opts-city:hover {
 }
 
 header .aqi-list {
-  width: 120px;
+  width: 135px;
   background-color: #fff;
   border-bottom: 3px solid #000;
 }
 
 header .aqi-list p {
-  padding: 10px 1rem;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
