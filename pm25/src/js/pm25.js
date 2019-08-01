@@ -14,8 +14,13 @@ let aqiData = null
     .then(json => {
       aqiData = json
       showCitySelectOpts(json)
-      // showContent(json)
+      showContent(json, '臺北市')
+      document.querySelector('#renewTime').textContent = json[0].PublishTime
+      document.querySelector('.view').classList.add('active')
       coverLayer.classList.add('hide')
+    })
+    .then(() => {
+      showAqiDetail(document.querySelector('.card').querySelector('p'))
     })
     .catch(err => {
       console.log(err)
@@ -124,6 +129,26 @@ window.addEventListener('load', () => {
   }
 }, false)
 //
+function showAqiDetail(source) {
+  document.querySelector('#cityName').textContent = source.dataset.name
+  document.querySelector('#aqiValue').textContent = source.dataset.aqi
+  document.querySelector('#o3Value').textContent = source.dataset.o3
+  document.querySelector('#pm10Value').textContent = source.dataset.pm10
+  document.querySelector('#pm25Value').textContent = source.dataset.pm25
+  document.querySelector('#coValue').textContent = source.dataset.co
+  document.querySelector('#so2Value').textContent = source.dataset.so2
+  document.querySelector('#no2Value').textContent = source.dataset.no2
+  let level = ''
+  let aqi = source.dataset.aqi
+  if (0 <= aqi && aqi <= 50) level = 'level-1'
+  if (51 <= aqi && aqi <= 100) level = 'level-2'
+  if (101 <= aqi && aqi <= 150) level = 'level-3'
+  if (151 <= aqi && aqi <= 200) level = 'level-4'
+  if (201 <= aqi && aqi <= 250) level = 'level-5'
+  if (251 <= aqi && aqi <= 300) level = 'level-6'
+  document.querySelector('#aqiValue').className = level
+}
+//
 aqiBox.addEventListener('click', (e) => {
   let siteData = null
   switch (e.target.tagName.toLowerCase()) {
@@ -134,21 +159,22 @@ aqiBox.addEventListener('click', (e) => {
       siteData = e.target.parentNode.parentNode.querySelector('p')
       break
   }
-  document.querySelector('#cityName').textContent = siteData.dataset.name
-  document.querySelector('#aqiValue').textContent = siteData.dataset.aqi
-  document.querySelector('#o3Value').textContent = siteData.dataset.o3
-  document.querySelector('#pm10Value').textContent = siteData.dataset.pm10
-  document.querySelector('#pm25Value').textContent = siteData.dataset.pm25
-  document.querySelector('#coValue').textContent = siteData.dataset.co
-  document.querySelector('#so2Value').textContent = siteData.dataset.so2
-  document.querySelector('#no2Value').textContent = siteData.dataset.no2
-  let level = ''
-  let aqi = siteData.dataset.aqi
-  if (0 <= aqi && aqi <= 50) level = 'level-1'
-  if (51 <= aqi && aqi <= 100) level = 'level-2'
-  if (101 <= aqi && aqi <= 150) level = 'level-3'
-  if (151 <= aqi && aqi <= 200) level = 'level-4'
-  if (201 <= aqi && aqi <= 250) level = 'level-5'
-  if (251 <= aqi && aqi <= 300) level = 'level-6'
-  document.querySelector('#aqiValue').className = level
+  showAqiDetail(siteData)
+  // document.querySelector('#cityName').textContent = siteData.dataset.name
+  // document.querySelector('#aqiValue').textContent = siteData.dataset.aqi
+  // document.querySelector('#o3Value').textContent = siteData.dataset.o3
+  // document.querySelector('#pm10Value').textContent = siteData.dataset.pm10
+  // document.querySelector('#pm25Value').textContent = siteData.dataset.pm25
+  // document.querySelector('#coValue').textContent = siteData.dataset.co
+  // document.querySelector('#so2Value').textContent = siteData.dataset.so2
+  // document.querySelector('#no2Value').textContent = siteData.dataset.no2
+  // let level = ''
+  // let aqi = siteData.dataset.aqi
+  // if (0 <= aqi && aqi <= 50) level = 'level-1'
+  // if (51 <= aqi && aqi <= 100) level = 'level-2'
+  // if (101 <= aqi && aqi <= 150) level = 'level-3'
+  // if (151 <= aqi && aqi <= 200) level = 'level-4'
+  // if (201 <= aqi && aqi <= 250) level = 'level-5'
+  // if (251 <= aqi && aqi <= 300) level = 'level-6'
+  // document.querySelector('#aqiValue').className = level
 })

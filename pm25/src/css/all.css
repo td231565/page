@@ -23,6 +23,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -31,15 +34,16 @@ header {
 
 header .header-left {
   width: 450px;
-  padding: 20px;
 }
 
 header .header-right {
-  width: 100%;
-  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-left: 3px solid #000;
 }
 
 header .header-right .aqi-list {
@@ -107,6 +111,7 @@ header .select-box-container .select-box .city-selections .opts-city:hover {
 }
 
 header .aqi-list {
+  width: 120px;
   background-color: #fff;
   border-bottom: 3px solid #000;
 }
@@ -129,11 +134,6 @@ header .aqi-list p {
 
 header .aqi-list p:nth-of-type(2) {
   height: 71px;
-  text-align: center;
-}
-
-header .aqi-list:nth-of-type(1) {
-  border-left: 3px solid #000;
 }
 
 header .aqi-list .level-1 {
@@ -161,21 +161,35 @@ header .aqi-list .level-6 {
 }
 
 .view {
-  margin-top: 180px;
+  width: 100%;
+  margin-top: 190px;
+  margin-bottom: 40px;
+  display: none;
+}
+
+.view.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .view .aqi-detail {
-  width: 400px;
+  margin-top: 20px;
+  padding: 30px 25px 20px 25px;
   text-align: center;
   font-size: 28px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
 }
 
 .view .aqi-detail .header {
   width: 100%;
-  margin: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,11 +241,11 @@ header .aqi-list .level-6 {
 }
 
 .view .aqi-detail .content {
-  width: 100%;
   margin: 15px;
 }
 
 .view .aqi-detail .content li {
+  width: 280px;
   padding: 5px;
   border-bottom: 1px solid #808080;
   display: -webkit-box;
@@ -267,9 +281,7 @@ header .aqi-list .level-6 {
 }
 
 .view .aqi-box {
-  width: 100%;
-  padding: 15px;
-  padding-left: 50px;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,6 +296,7 @@ header .aqi-list .level-6 {
 
 .view .aqi-box .card {
   width: 350px;
+  min-height: 60px;
   margin: 15px;
   font-size: 30px;
   font-weight: 500;
@@ -376,9 +389,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -391,15 +404,15 @@ footer a {
 }
 
 footer a:visited {
-  color: #fff;
+  color: #410909;
 }
 
 footer a:hover {
-  color: #adff2f;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
 footer a:active {
-  color: #fbff00;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   -webkit-transform: translate(0px, 1px);
           transform: translate(0px, 1px);
 }
